@@ -1,0 +1,14 @@
+{
+    "name": "iecse/mailer",
+    "description": "The mailer template of IE CSE",
+    "authors": [
+        {
+            "name": "Aditya Walvekar",
+            "email": "aditya.s.walvekar@gmail.com"
+        }
+    ],
+    "require": {
+        "swiftmailer/swiftmailer": "5.4.1",
+        "monolog/monolog": "1.17.*"
+    }
+}

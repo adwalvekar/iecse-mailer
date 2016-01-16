@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+.clear {
+  width: 200px;
+  /*float: left;*/
+    display: inline-block;
+    zoom: 1;
+}
+.padb10{
+  padding-bottom:40px;
+
+}
+label p{
+	padding-left: 35px !important;
+	margin-top:-21px;
+}
+.cb
+{
+  float:left !important;
+  margin-top:0px !important;
+  margin-right:5px;
+}
+

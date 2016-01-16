@@ -1,0 +1,7 @@
+{
+
+	"smtp_server": "smtp.gmail.com",
+	"port": "465",
+	"username":"mailman@iecsemanipal.com",
+	"password":"sierrazulufoxtrotindia"
+}
