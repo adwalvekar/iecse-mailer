@@ -36,20 +36,26 @@ else {
     $message=$_POST['message'];
  if(isset($_POST['board'])){
       if($_POST['board']=='board'){
-        $q1="SELECT * FROM emails  WHERE position='board'";
+        $q1="SELECT email FROM emails  WHERE position='board'";
         $r1=mysqli_query($link,$q1);
         if($r1){
-          if(mysqli_num_rows($r1)>=1){
+           if(mysqli_num_rows($r1)>=1){
+            $num= mysqli_num_rows($r1);
+            $i=0;
+            $a=array();
          while($q1_arr=mysqli_fetch_assoc($r1)){
-
-          $mail = Swift_Message::newInstance($subject)
+          array_push($a, $q1_arr['email']); 
+       }
+        $mail = Swift_Message::newInstance($subject)
           ->setFrom(array('server@iecsemanipal.com' => 'IE CSE:Postman'))
-          ->setTo($q1_arr['email'])
+          ->setTo($a)
           ->setBody($message,'text/html');
           $result = $mailer->send($mail);
-          }
-        }
-        
+           for ($i=0; $i <sizeof($a) ; $i++) { 
+         echo $a[$i];
+         echo '<br>';
+       }
+        }        
       }
     }
   }
@@ -59,15 +65,22 @@ else {
         $r1=mysqli_query($link,$q1);
         if($r1){
           if(mysqli_num_rows($r1)>=1){
+            $num= mysqli_num_rows($r1);
+            $i=0;
+            $a=array();
          while($q1_arr=mysqli_fetch_assoc($r1)){
-
-          $mail = Swift_Message::newInstance($subject)
+          array_push($a, $q1_arr['email']); 
+       }
+        $mail = Swift_Message::newInstance($subject)
           ->setFrom(array('server@iecsemanipal.com' => 'IE CSE:Postman'))
-          ->setTo($q1_arr['email'])
+          ->setTo($a)
           ->setBody($message,'text/html');
           $result = $mailer->send($mail);
-          }
-        }
+           for ($i=0; $i <sizeof($a) ; $i++) { 
+         echo $a[$i];
+         echo '<br>';
+       }
+        }    
         
       }
     }
@@ -78,15 +91,22 @@ else {
         $r1=mysqli_query($link,$q1);
         if($r1){
           if(mysqli_num_rows($r1)>=1){
+            $num= mysqli_num_rows($r1);
+            $i=0;
+            $a=array();
          while($q1_arr=mysqli_fetch_assoc($r1)){
-
-          $mail = Swift_Message::newInstance($subject)
+          array_push($a, $q1_arr['email']); 
+       }
+        $mail = Swift_Message::newInstance($subject)
           ->setFrom(array('server@iecsemanipal.com' => 'IE CSE:Postman'))
-          ->setTo($q1_arr['email'])
+          ->setTo($a)
           ->setBody($message,'text/html');
           $result = $mailer->send($mail);
-          }
-        }
+           for ($i=0; $i <sizeof($a) ; $i++) { 
+         echo $a[$i];
+         echo '<br>';
+       }
+        }    
         
       }
     }
@@ -97,15 +117,22 @@ else {
         $r1=mysqli_query($link,$q1);
         if($r1){
           if(mysqli_num_rows($r1)>=1){
+            $num= mysqli_num_rows($r1);
+            $i=0;
+            $a=array();
          while($q1_arr=mysqli_fetch_assoc($r1)){
-
-          $mail = Swift_Message::newInstance($subject)
+          array_push($a, $q1_arr['email']); 
+       }
+        $mail = Swift_Message::newInstance($subject)
           ->setFrom(array('server@iecsemanipal.com' => 'IE CSE:Postman'))
-          ->setTo($q1_arr['email'])
+          ->setTo($a)
           ->setBody($message,'text/html');
           $result = $mailer->send($mail);
-          }
-        }
+           for ($i=0; $i <sizeof($a) ; $i++) { 
+         echo $a[$i];
+         echo '<br>';
+       }
+        }    
         
       }
     }
@@ -116,16 +143,49 @@ if(isset($_POST['alumni'])){
         $q1="SELECT * FROM emails  WHERE position='alumni'";
         $r1=mysqli_query($link,$q1);
         if($r1){
-          if(mysqli_num_rows($r1)>=1){
+         if(mysqli_num_rows($r1)>=1){
+            $num= mysqli_num_rows($r1);
+            $i=0;
+            $a=array();
          while($q1_arr=mysqli_fetch_assoc($r1)){
-
-          $mail = Swift_Message::newInstance($subject)
+          array_push($a, $q1_arr['email']); 
+       }
+        $mail = Swift_Message::newInstance($subject)
           ->setFrom(array('server@iecsemanipal.com' => 'IE CSE:Postman'))
-          ->setTo($q1_arr['email'])
+          ->setTo($a)
           ->setBody($message,'text/html');
           $result = $mailer->send($mail);
-          }
-        }
+           for ($i=0; $i <sizeof($a) ; $i++) { 
+         echo $a[$i];
+         echo '<br>';
+       }
+        }    
+        
+      }
+    }
+  }git push -u origin --all
+  if(isset($_POST['gdg'])){
+      if($_POST['gdg']=='gdg'){
+        $q1="SELECT * FROM emails  WHERE position='gdg'";
+        $r1=mysqli_query($link,$q1);
+        if($r1){
+         if(mysqli_num_rows($r1)>=1){
+            $num= mysqli_num_rows($r1);
+            $i=0;
+            $a=array();
+         while($q1_arr=mysqli_fetch_assoc($r1)){
+          array_push($a, $q1_arr['email']); 
+       }
+        $mail = Swift_Message::newInstance($subject)
+          ->setFrom(array('server@iecsemanipal.com' => 'IE CSE:Postman'))
+          ->setTo($a)
+          ->setBody($message,'text/html');
+          $result = $mailer->send($mail);
+           for ($i=0; $i <sizeof($a) ; $i++) { 
+         echo $a[$i];
+         echo '<br>';
+       }
+        }    
         
       }
     }
