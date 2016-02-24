@@ -22,11 +22,11 @@ else {
   $log->pushHandler(new Monolog\Handler\StreamHandler('mails.log', Monolog\Logger::INFO)); 
 
   try {
-  $transport= Swift_SmtpTransport::newInstance("smtp.gmail.com","465","ssl")
-  ->setUsername("mailman@iecsemanipal.com")
-  ->setPassword("sierrazulufoxtrotindia");
+  $transport= Swift_SmtpTransport::newInstance("smtp.zoho.com","465","ssl")
+  ->setUsername("postman@iecse.xyz")
+  ->setPassword("posterman");
   } catch (Exception $e) {
-    echo "Couldn't establish connection to the SMTP Server. Check server config in /config/config.json";
+    echo "Couldn't establish connection to the SMTP Server. Check server config in code.";
     
   }
   $mailer = Swift_Mailer::newInstance($transport);
@@ -47,7 +47,7 @@ else {
           array_push($a, $q1_arr['email']); 
        }
         $mail = Swift_Message::newInstance($subject)
-          ->setFrom(array('server@iecsemanipal.com' => 'IE CSE:Postman'))
+          ->setFrom(array('postman@iecse.xyz' => 'IE CSE:Postman'))
           ->setTo($a)
           ->setBody($message,'text/html');
           $result = $mailer->send($mail);
@@ -72,7 +72,7 @@ else {
           array_push($a, $q1_arr['email']); 
        }
         $mail = Swift_Message::newInstance($subject)
-          ->setFrom(array('server@iecsemanipal.com' => 'IE CSE:Postman'))
+          ->setFrom(array('postman@iecse.xyz' => 'IE CSE:Postman'))
           ->setTo($a)
           ->setBody($message,'text/html');
           $result = $mailer->send($mail);
@@ -98,7 +98,7 @@ else {
           array_push($a, $q1_arr['email']); 
        }
         $mail = Swift_Message::newInstance($subject)
-          ->setFrom(array('server@iecsemanipal.com' => 'IE CSE:Postman'))
+          ->setFrom(array('postman@iecse.xyz' => 'IE CSE:Postman'))
           ->setTo($a)
           ->setBody($message,'text/html');
           $result = $mailer->send($mail);
@@ -124,7 +124,7 @@ else {
           array_push($a, $q1_arr['email']); 
        }
         $mail = Swift_Message::newInstance($subject)
-          ->setFrom(array('server@iecsemanipal.com' => 'IE CSE:Postman'))
+          ->setFrom(array('postman@iecse.xyz' => 'IE CSE:Postman'))
           ->setTo($a)
           ->setBody($message,'text/html');
           $result = $mailer->send($mail);
@@ -151,7 +151,7 @@ if(isset($_POST['alumni'])){
           array_push($a, $q1_arr['email']); 
        }
         $mail = Swift_Message::newInstance($subject)
-          ->setFrom(array('server@iecsemanipal.com' => 'IE CSE:Postman'))
+          ->setFrom(array('postman@iecse.xyz' => 'IE CSE:Postman'))
           ->setTo($a)
           ->setBody($message,'text/html');
           $result = $mailer->send($mail);
@@ -177,7 +177,7 @@ if(isset($_POST['alumni'])){
           array_push($a, $q1_arr['email']); 
        }
         $mail = Swift_Message::newInstance($subject)
-          ->setFrom(array('server@iecsemanipal.com' => 'IE CSE:Postman'))
+          ->setFrom(array('postman@iecse.xyz' => 'IE CSE:Postman'))
           ->setTo($a)
           ->setBody($message,'text/html');
           $result = $mailer->send($mail);
@@ -191,9 +191,7 @@ if(isset($_POST['alumni'])){
     }
   }
   }
-}
-
- 
+} 
 ?> 
 
 <!DOCTYPE html>
