@@ -50,10 +50,7 @@ else {
           ->setTo($a)
           ->setBody($message,'text/html');
           $result = $mailer->send($mail);
-           for ($i=0; $i <sizeof($a) ; $i++) { 
-         echo $a[$i];
-         echo '<br>';
-       }
+       
         }        
       }
     }
@@ -75,10 +72,7 @@ else {
           ->setTo($a)
           ->setBody($message,'text/html');
           $result = $mailer->send($mail);
-           for ($i=0; $i <sizeof($a) ; $i++) { 
-         echo $a[$i];
-         echo '<br>';
-       }
+           
         }    
         
       }
@@ -101,10 +95,7 @@ else {
           ->setTo($a)
           ->setBody($message,'text/html');
           $result = $mailer->send($mail);
-           for ($i=0; $i <sizeof($a) ; $i++) { 
-         echo $a[$i];
-         echo '<br>';
-       }
+           
         }    
         
       }
@@ -127,10 +118,7 @@ else {
           ->setTo($a)
           ->setBody($message,'text/html');
           $result = $mailer->send($mail);
-           for ($i=0; $i <sizeof($a) ; $i++) { 
-         echo $a[$i];
-         echo '<br>';
-       }
+          
         }    
         
       }
@@ -154,10 +142,7 @@ if(isset($_POST['alumni'])){
           ->setTo($a)
           ->setBody($message,'text/html');
           $result = $mailer->send($mail);
-           for ($i=0; $i <sizeof($a) ; $i++) { 
-         echo $a[$i];
-         echo '<br>';
-       }
+          
         }    
         
       }
@@ -180,10 +165,7 @@ if(isset($_POST['alumni'])){
           ->setTo($a)
           ->setBody($message,'text/html');
           $result = $mailer->send($mail);
-           for ($i=0; $i <sizeof($a) ; $i++) { 
-         echo $a[$i];
-         echo '<br>';
-       }
+           
         }    
         
       }
