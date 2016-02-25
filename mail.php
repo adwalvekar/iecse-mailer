@@ -1,5 +1,4 @@
 <?php
-
 require __DIR__ . '/vendor/autoload.php';
 ini_set('max_execution_time', 300);
 session_start();
@@ -163,7 +162,7 @@ if(isset($_POST['alumni'])){
         
       }
     }
-  }git push -u origin --all
+  }
   if(isset($_POST['gdg'])){
       if($_POST['gdg']=='gdg'){
         $q1="SELECT * FROM emails  WHERE position='gdg'";
